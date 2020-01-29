@@ -5,5 +5,16 @@
 }
 
 <div class="text-center">
-    <p>The URL is @Model.Host</p>
+    <p>Server URL is @Model.Host</p>
 </div>
+<div class="text-center">
+    <p>Client URL is <span id="url"></span></p>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">   
+        $(function() {
+            $('#url').text(window.location.href);
+        });
+    </script>
+}
